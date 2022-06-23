@@ -1,8 +1,9 @@
-package com.example.wepee.service;
+package com.example.wepee.service.Impl;
 
 import com.example.wepee.entity.Client;
 import com.example.wepee.model.ClientModel;
 import com.example.wepee.repository.ClientRepository;
+import com.example.wepee.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ClientServiceImpl implements ClientService{
+public class ClientServiceImpl implements ClientService {
 
     private ClientRepository clientRepository;
 
@@ -35,6 +36,7 @@ public class ClientServiceImpl implements ClientService{
                 .accountNumber(clientModel.getAccountNumber())
                 .bvn(clientModel.getBvn())
                 .nin(clientModel.getNin())
+                .product(clientModel.getProduct())
                 .build();
         return newClient;
     }

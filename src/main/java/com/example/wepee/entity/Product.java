@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Set;
 
 @Entity
 @Data
@@ -29,4 +30,5 @@ public class Product {
 
     @OneToOne
     private Charges charges;
+
 }

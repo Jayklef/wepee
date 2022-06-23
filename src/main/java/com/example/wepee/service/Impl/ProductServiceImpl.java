@@ -1,16 +1,18 @@
-package com.example.wepee.service;
+package com.example.wepee.service.Impl;
 
 import com.example.wepee.entity.Product;
 import com.example.wepee.model.ProductModel;
 import com.example.wepee.repository.ProductRepository;
+import com.example.wepee.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
     private ProductRepository productRepository;
 
@@ -36,7 +38,7 @@ public class ProductServiceImpl implements ProductService{
                 .charges(productModel.getCharges())
                 .build();
 
-        return newProduct;
+        return productRepository.save(newProduct);
     }
 
     @Override

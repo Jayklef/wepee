@@ -1,5 +1,6 @@
 package com.example.wepee.model;
 
+import com.example.wepee.entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +17,5 @@ public class ClientModel {
     private String accountNumber;
     private String bvn;
     private String nin;
+    private Product product;
 }

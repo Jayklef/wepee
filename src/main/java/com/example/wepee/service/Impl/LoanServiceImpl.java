@@ -1,15 +1,16 @@
-package com.example.wepee.service;
+package com.example.wepee.service.Impl;
 
 import com.example.wepee.entity.Loan;
 import com.example.wepee.model.LoanModel;
 import com.example.wepee.repository.LoanRepository;
+import com.example.wepee.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class LoanServiceImpl implements LoanService{
+public class LoanServiceImpl implements LoanService {
 
     private LoanRepository loanRepository;
 
