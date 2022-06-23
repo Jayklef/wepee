@@ -32,6 +32,6 @@ public class LoanServiceImpl implements LoanService {
                 .duration(loanModel.getDuration())
                 .products(loanModel.getProducts())
                 .build();
-        return newLoan;
+        return loanRepository.save(newLoan);
     }
 }

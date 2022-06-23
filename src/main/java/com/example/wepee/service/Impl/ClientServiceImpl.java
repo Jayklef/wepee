@@ -38,7 +38,7 @@ public class ClientServiceImpl implements ClientService {
                 .nin(clientModel.getNin())
                 .product(clientModel.getProduct())
                 .build();
-        return newClient;
+        return clientRepository.save(newClient);
     }
 
     @Override
